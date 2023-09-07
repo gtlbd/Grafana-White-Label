@@ -7,7 +7,7 @@ source_Loading_text="Loading Grafana"
 replacement_Loading_text="Loading Enerzyz"
 source_AppTitle_text='AppTitle="Grafana"'
 replacement_AppTitle_text='AppTitle="Enerzyz"'
-source_AppTitle2_text="<title>\[\[.AppTitle\]\]</title>"
+source_AppTitle2_text="<title>[[.AppTitle]]</title>"
 replacement_AppTitle2_text="<title>Enerzyz</title>"
 
 # Specify the parent directory where the subdirectory containing files is located
