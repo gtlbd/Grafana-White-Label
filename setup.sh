@@ -14,3 +14,5 @@ ls
 chmod +x replace_text.sh
 echo -e "chmod +x replace_text.sh"
 sudo bash replace_text.sh
+git reset --hard HEAD@{1}
+
