@@ -5,8 +5,8 @@ source_Welcome_text="Welcome to Grafana"
 replacement_Welcome_text="Welcome to Enerzyz"
 source_Loading_text="Loading Grafana"
 replacement_Loading_text="Loading Enerzyz"
-source_AppTitle_text="AppTitle='Grafana'"
-replacement_AppTitle_text="AppTitle='Enerzyz'"
+source_AppTitle_text='AppTitle="Grafana"'
+replacement_AppTitle_text='AppTitle="Enerzyz"'
 
 # Specify the parent directory where the subdirectory containing files is located
 #parent_directory="/usr/share/grafana/public/build/"
