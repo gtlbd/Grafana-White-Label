@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# Define the source and replacement texts
+# Define the source and replacement text
 source_text="Welcome to Grafana"
 replacement_text="Welcome to Enerzyz"
 
-# Define the file path
-file_path="/usr/share/grafana/public/build/2077.a35416a524fb1433fe6e.js"
+# Specify the directory where the files are located
+directory="/usr/share/grafana/public/build/"
 
-# Use sed to perform the replacement
-sed -i "s/$source_text/$replacement_text/g" "$file_path"
-
-# Check if the replacement was successful
-if [ $? -eq 0 ]; then
-    echo "Replacement completed successfully."
-else
-    echo "Replacement failed."
-fi
+# Iterate through all files in the directory
+for file in "$directory"*
+do
+    if [ -f "$file" ]; then
+        # Use sed to replace the text and save it back to the file
+        sed -i "s/$source_text/$replacement_text/g" "$file"
+        echo "Replaced in $file"
+    fi
+done
