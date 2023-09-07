@@ -8,7 +8,7 @@ replacement_Loading_text="Loading Enerzyz"
 
 
 # Specify the directory where the files are located
-directory="/usr/share/grafana/public/build/"
+directory="/usr/share/grafana/public/"
 
 # Iterate through all files in the directory
 for file in "$directory"*
