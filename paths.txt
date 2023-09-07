@@ -1,0 +1,4 @@
+Grafana-White-Label/grafana/public/img
+Grafana-White-Label/Original_Files
+/usr/share/grafana/public/img/grafana_icon.svg
+/public/img/grafana_icon.svg
