@@ -16,5 +16,7 @@ echo -e "chmod +x replace_text.sh"
 sudo bash replace_text.sh
 #git reset --hard HEAD@{1}
 git checkout -- replace_text.sh
+sudo service grafana-server force-reload
+sudo service grafana-server status
 
 
