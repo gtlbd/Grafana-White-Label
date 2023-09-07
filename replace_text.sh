@@ -7,6 +7,8 @@ source_Loading_text="Loading Grafana"
 replacement_Loading_text="Loading Enerzyz"
 source_AppTitle_text='AppTitle="Grafana"'
 replacement_AppTitle_text='AppTitle="Enerzyz"'
+source_AppTitle2_text="<title>\[\[.AppTitle\]\]</title>"
+replacement_AppTitle2_text="<title>Enerzyz</title>"
 
 # Specify the parent directory where the subdirectory containing files is located
 #parent_directory="/usr/share/grafana/public/build/"
@@ -28,6 +30,7 @@ do
     if [ -f "$file" ]; then
         # Use sed to replace the text and save it back to the file
         sed -i "s/$source_Loading_text/$replacement_Loading_text/g" "$file"
+		sed -i "s/$source_AppTitle2_text/$replacement_AppTitle2_text/g" "$file"
         echo "Replaced in $file"
     fi
 done
