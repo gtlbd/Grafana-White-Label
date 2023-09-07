@@ -7,3 +7,5 @@ sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/grafana_icon.svg /us
 echo -e "Done - grafana_icon.svg"
 sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/fav32.png /usr/share/grafana/public/img/
 echo -e "Done - fav32.png"
+sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/g8_login_dark.svg /usr/share/grafana/public/img/
+echo -e "Done - g8_login_dark.svg"
