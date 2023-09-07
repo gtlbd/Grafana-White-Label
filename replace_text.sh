@@ -13,17 +13,18 @@ replacement_AppTitle2_text="<title>Enerzyz</title>"
 # Specify the parent directory where the subdirectory containing files is located
 #parent_directory="/usr/share/grafana/public/build/"
 # Iterate through all files in the directory
-# directory="/usr/share/grafana/public/build/"
-# for file in "$directory"*
-# do
-    # if [ -f "$file" ]; then
+directory="/usr/share/grafana/public/build/"
+for file in "$directory"*
+do
+    if [ -f "$file" ]; then
         #Use sed to replace the text and save it back to the file
-        # sed -i "s/$source_Welcome_text/$replacement_Welcome_text/g" "$file"
-		# sed -i "s/$source_AppTitle_text/$replacement_AppTitle_text/g" "$file"
-        # echo "Replaced in $file"
-    # fi
-# done
-# echo "Text replacement completed. for - Welcome"
+        sed -i "s/$source_Welcome_text/$replacement_Welcome_text/g" "$file"
+		sed -i "s/$source_AppTitle_text/$replacement_AppTitle_text/g" "$file"
+		sed -i 's|\[{target:"_blank",id:"documentation".*grafana_footer"}\]|\[\]|g' "$file"
+        echo "Replaced in $file"
+    fi
+done
+echo "Text replacement completed. for - Welcome"
 directory="/usr/share/grafana/public/views/"
 for file in "$directory"*
 do
@@ -34,7 +35,6 @@ do
         echo "Replaced in $file"
     fi
 done
-#sed -i 's|<title>\[\[.AppTitle\]\]</title>|<title>Volkov Labs</title>|g' /usr/share/grafana/public/views/index.html
 echo "Text replacement completed. for - Loading"
 # Find and replace text recursively in all files under the parent directory
 # find "$parent_directory" -type f -exec sh -c '
