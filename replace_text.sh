@@ -22,6 +22,8 @@ do
 		sed -i "s/$source_AppTitle_text/$replacement_AppTitle_text/g" "$file"
 		sed -i 's|\[{target:"_blank",id:"documentation".*grafana_footer"}\]|\[\]|g' "$file"
 		sed -i 's|({target:"_blank",id:"license",.*licenseUrl})|()|g' "$file"
+		sed -i 's|({target:"_blank",id:"version",.*CHANGELOG.md":void 0})|()|g' "$file"
+		sed -i 's|({target:"_blank",id:"updateVersion",.*grafana_footer"})|()|g' "$file"
         echo "Replaced in $file"
     fi
 done
