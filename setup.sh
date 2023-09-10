@@ -1,8 +1,13 @@
 #!/bin/bash
-#sudo mkdir -p /home/$USER/Grafana-White-Label/Original_Files/public
-echo -e "Starting Backup - from: '/usr/share/grafana/public/', to: '/home/$USER/Grafana-White-Label/Original_Files/public/'"
-#sudo cp -ru /usr/share/grafana/public/* /home/$USER/Grafana-White-Label/Original_Files/public/
-echo -e "Done - Backup"
+# sudo mkdir -p /home/$USER/Grafana-White-Label/Original_Files/public
+# echo -e "Starting Backup - from: '/usr/share/grafana/public/', to: '/home/$USER/Grafana-White-Label/Original_Files/public/'"
+# sudo cp -ru /usr/share/grafana/public/* /home/$USER/Grafana-White-Label/Original_Files/public/
+# echo -e "Done - Backup"
+echo -e "service grafana-server stop"
+sudo service grafana-server stop
+chmod +x create_and_backup.sh
+echo -e "create_and_backup.sh"
+bash create_and_backup.sh
 sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/grafana_icon.svg /usr/share/grafana/public/img/
 echo -e "Done - grafana_icon.svg"
 sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/fav32.png /usr/share/grafana/public/img/
@@ -14,9 +19,9 @@ ls
 chmod +x replace_text.sh
 echo -e "chmod +x replace_text.sh"
 sudo bash replace_text.sh
-#git reset --hard HEAD@{1}
 git checkout -- replace_text.sh
-sudo service grafana-server force-reload
+git checkout -- create_and_backup.sh
+sudo service grafana-server start
 sudo service grafana-server status
 
 

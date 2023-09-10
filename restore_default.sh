@@ -1,4 +1,5 @@
 #!/bin/bash
+echo -e "service grafana-server stop"
 sudo service grafana-server stop
 cd /home/$USER/Grafana-White-Label/
 ls
