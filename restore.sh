@@ -5,23 +5,20 @@ echo -e "Restoring Backup - from: '/home/$USER/Grafana-White-Label/Original_File
 source_dir="/home/$USER/Grafana-White-Label/Original_Files/public/"
 destination_dir="/usr/share/grafana/public/"
 
-# Copy files from source to destination
-sudo cp -r "$source_dir"* "$destination_dir" &
+# Function to display copy progress
+function copy_with_progress {
+    # Copy files from source to destination with progress using rsync
+    sudo rsync -a --info=progress2 "$1" "$2"
+}
 
-# Get the process ID of the copy operation
-cp_pid=$!
-
-while ps -p $cp_pid > /dev/null; do
-    # Calculate the percentage of copied files
-    copied_files=$(find "$destination_dir" -type f | wc -l)
-    total_files=$(find "$source_dir" -type f | wc -l)
-    percentage=$((copied_files * 100 / total_files))
+# Check if source directory exists
+if [ -d "$source_dir" ]; then
+    echo "Restoring Backup - from: '$source_dir', to: '$destination_dir'"
     
-    # Print the progress
-    echo "Progress: $percentage%"
-
-    # Sleep for a while before checking again
-    sleep 1
-done
-
-echo "Restore Default operation completed..!"
+    # Call the function to copy files with progress
+    copy_with_progress "$source_dir" "$destination_dir"
+    
+    echo "Restore Default operation completed..!"
+else
+    echo "Source directory '$source_dir' does not exist."
+fi
