@@ -25,7 +25,7 @@ do
 		sed -i 's|({target:"_blank",id:"version",.*CHANGELOG.md":void 0})|()|g' "$file"
 		sed -i 's|({target:"_blank",id:"updateVersion",.*grafana_footer"})|()|g' "$file"
 		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"News"})|null|g' "$file"
-		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"Help"})|null|g' "$file"
+		#sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"Help"})|null|g' "$file"
         echo "Replaced in $file"
     fi
 done
@@ -37,7 +37,15 @@ do
         # Use sed to replace the text and save it back to the file
         sed -i "s/$source_Loading_text/$replacement_Loading_text/g" "$file"
         sed -i -E "s|$source_AppTitle2_text|$replacement_AppTitle2_text|g" "$file"
+		
         echo "Replaced in $file"
     fi
 done
+sed -i "s|\[\[.NavTree\]\],|nav,|g; \
+    s|window.grafanaBootData = {| \
+    let nav = [[.NavTree]]; \
+    const help = nav.find((element) => element.id === 'help'); \
+    if (help) { help['subTitle'] = 'Application';} \
+    window.grafanaBootData = {|g" \
+    /usr/share/grafana/public/views/index.html
 echo "Text replacement completed. for - Loading"
