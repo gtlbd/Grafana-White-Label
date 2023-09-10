@@ -10,6 +10,6 @@ mkdir -p "$destination_dir"
 echo -e "Starting Backup - from: '$source_dir', to: '$destination_dir'"
 
 # Use rsync to create a backup of files and directories recursively
-sudo rsync -av --ignore-existing "$source_dir" "$destination_dir"
+sudo rsync -av --info=progress2 --ignore-existing "$source_dir" "$destination_dir"
 
 echo -e "Backup completed"
