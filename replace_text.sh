@@ -14,22 +14,22 @@ replacement_AppTitle2_text="<title>Enerzyz</title>"
 #parent_directory="/usr/share/grafana/public/build/"
 # Iterate through all files in the directory
 directory="/usr/share/grafana/public/build/"
-for file in "$directory"*
-do
-    if [ -f "$file" ]; then
-        #Use sed to replace the text and save it back to the file
-        sed -i "s/$source_Welcome_text/$replacement_Welcome_text/g" "$file"
-		sed -i "s/$source_AppTitle_text/$replacement_AppTitle_text/g" "$file"
-		sed -i 's|\[{target:"_blank",id:"documentation".*grafana_footer"}\]|\[\]|g' "$file"
-		sed -i 's|({target:"_blank",id:"license",.*licenseUrl})|()|g' "$file"
-		sed -i 's|({target:"_blank",id:"version",.*CHANGELOG.md":void 0})|()|g' "$file"
-		sed -i 's|({target:"_blank",id:"updateVersion",.*grafana_footer"})|()|g' "$file"
-		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"News"})|null|g' "$file"
-		#sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"Help"})|null|g' "$file"
-        echo "Replaced in $file"
-    fi
-done
-echo "Text replacement completed. for - Welcome"
+# for file in "$directory"*
+# do
+    # if [ -f "$file" ]; then
+        Use sed to replace the text and save it back to the file
+        # sed -i "s/$source_Welcome_text/$replacement_Welcome_text/g" "$file"
+		# sed -i "s/$source_AppTitle_text/$replacement_AppTitle_text/g" "$file"
+		# sed -i 's|\[{target:"_blank",id:"documentation".*grafana_footer"}\]|\[\]|g' "$file"
+		# sed -i 's|({target:"_blank",id:"license",.*licenseUrl})|()|g' "$file"
+		# sed -i 's|({target:"_blank",id:"version",.*CHANGELOG.md":void 0})|()|g' "$file"
+		# sed -i 's|({target:"_blank",id:"updateVersion",.*grafana_footer"})|()|g' "$file"
+		# sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"News"})|null|g' "$file"
+		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"Help"})|null|g' "$file"
+        # echo "Replaced in $file"
+    # fi
+# done
+# echo "Text replacement completed. for - Welcome"
 directory="/usr/share/grafana/public/views/"
 for file in "$directory"*
 do
