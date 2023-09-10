@@ -9,7 +9,7 @@ source_AppTitle_text='AppTitle="Grafana"'
 replacement_AppTitle_text='AppTitle="Enerzyz"'
 source_AppTitle2_text="<title>\[\[.AppTitle\]\]</title>"
 replacement_AppTitle2_text="<title>Enerzyz</title>"
-source_FavIcon_text="[\[.FavIcon\]\]"
+source_FavIcon_text="\[\[.FavIcon\]\]"
 replacement_FavIcon_text="public/img/fav32.png"
 
 # Specify the parent directory where the subdirectory containing files is located
