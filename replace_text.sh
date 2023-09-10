@@ -25,7 +25,7 @@ do
 		sed -i 's|({target:"_blank",id:"version",.*CHANGELOG.md":void 0})|()|g' "$file"
 		sed -i 's|({target:"_blank",id:"updateVersion",.*grafana_footer"})|()|g' "$file"
 		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"News"})|null|g' "$file"
-		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"help"})|null|g' "$file"
+		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"Help"})|null|g' "$file"
         echo "Replaced in $file"
     fi
 done
