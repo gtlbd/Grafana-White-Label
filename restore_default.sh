@@ -5,6 +5,6 @@ ls
 chmod +x restore.sh
 echo -e "chmod +x restore.sh"
 sudo bash restore.sh
-git checkout -- replace_text.sh
+git checkout -- restore.sh
 sudo service grafana-server start
 sudo service grafana-server status

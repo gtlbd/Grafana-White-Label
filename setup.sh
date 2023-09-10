@@ -1,5 +1,5 @@
 #!/bin/bash
-#sudo mkdir -p /home/ramim/Grafana-White-Label/Original_Files/public
+#sudo mkdir -p /home/$USER/Grafana-White-Label/Original_Files/public
 echo -e "Starting Backup - from: '/usr/share/grafana/public/', to: '/home/$USER/Grafana-White-Label/Original_Files/public/'"
 #sudo cp -ru /usr/share/grafana/public/* /home/$USER/Grafana-White-Label/Original_Files/public/
 echo -e "Done - Backup"
