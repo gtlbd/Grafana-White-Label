@@ -14,6 +14,12 @@ sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/fav32.png /usr/share
 echo -e "Done - fav32.png"
 sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/g8_login_dark.svg /usr/share/grafana/public/img/
 echo -e "Done - g8_login_dark.svg"
+sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/mstile-150x150.png /usr/share/grafana/public/img/
+echo -e "Done - mstile-150x150.png"
+sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/apple-touch-icon.png /usr/share/grafana/public/img/
+echo -e "Done - apple-touch-icon.png"
+sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/g8_login_light.svg /usr/share/grafana/public/img/
+echo -e "Done - g8_login_light.svg"
 cd /home/$USER/Grafana-White-Label/
 ls
 chmod +x replace_text.sh
