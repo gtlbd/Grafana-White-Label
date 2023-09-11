@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Define the source and replacement text
-source_Welcome_text="Welcome to Grafana"
-replacement_Welcome_text="Welcome to Enerzyz"
+# source_Welcome_text="Welcome to Grafana"
+# replacement_Welcome_text="Welcome to Enerzyz"
+source_Welcome_text="Grafana"
+replacement_Welcome_text="Enerzyz"
 source_Loading_text="Loading Grafana"
 replacement_Loading_text="Loading Enerzyz"
 source_AppTitle_text='AppTitle="Grafana"'
