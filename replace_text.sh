@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define the source and replacement text
-# source_Welcome_text="Welcome to Grafana"
-# replacement_Welcome_text="Welcome to Enerzyz"
-source_Welcome_text="Grafana"
-replacement_Welcome_text="Enerzyz"
+source_Welcome_text="Welcome to Grafana"
+replacement_Welcome_text="Welcome to Enerzyz"
+# source_Welcome_text="Grafana"
+# replacement_Welcome_text="Enerzyz"
 source_Loading_text="Loading Grafana"
 replacement_Loading_text="Loading Enerzyz"
 source_AppTitle_text='AppTitle="Grafana"'
@@ -30,6 +30,9 @@ do
 		sed -i 's|({target:"_blank",id:"updateVersion",.*grafana_footer"})|()|g' "$file"
 		sed -i 's|..createElement(....,{className:.,onClick:.,iconOnly:!0,icon:"rss","aria-label":"News"})|null|g' "$file"
 		sed -i 's|,he&&a.createElement(sl.L,{overlay:()=>a.createElement(Vc,{node:he}),placement:"bottom-end"},a.createElement(ao.h,{iconOnly:!0,icon:"question-circle","aria-label":"Help"}))| |g' "$file"
+		
+		
+		sed -i 's|Extend the Grafana experience|Extend the Enerzyz experience|g' "$file"
         echo "Replaced in $file"
     fi
 done
