@@ -33,6 +33,7 @@ do
 		
 		
 		sed -i 's|Extend the Grafana experience|Extend the Enerzyz experience|g' "$file"
+		sed -i 's|Manage users in Grafana|Manage users in Enerzyz|g' "$file"
         echo "Replaced in $file"
     fi
 done
