@@ -35,6 +35,11 @@ do
 		sed -i 's|Extend the Grafana experience|Extend the Enerzyz experience|g' "$file"
 		sed -i 's|Manage users in Grafana|Manage users in Enerzyz|g' "$file"
 		sed -i 's|against the Grafana API.|against the Enerzyz API.|g' "$file"
+		
+		sed -i 's|View the settings defined in your Grafana config|View the settings defined in your Enerzyz config|g' "$file"
+		sed -i 's|These system settings are defined in grafana.ini|These system settings are defined in enerzyz.ini|g' "$file"
+		sed -i 's|need to restart Grafana.|need to restart Enerzyz.|g' "$file"
+		sed -i 's|Isolated instances of Grafana|Isolated instances of Enerzyz|g' "$file"
         echo "Replaced in $file"
     fi
 done
