@@ -42,7 +42,10 @@ do
 		sed -i 's|Isolated instances of Grafana|Isolated instances of Enerzyz|g' "$file"
 		sed -i 's|Stats and license| |g' "$file"
 		sed -i 's|/admin/upgrading| |g' "$file"
-		sed -i 's|http://docs.grafana.org/reference/playlist/| |g' "$file"
+		sed -i 's|Import dashboard from file or Grafana.com|Import dashboard from file or app.enerzyz.com|g' "$file"
+		sed -i 's|Import via grafana.com|Import via app.enerzyz.com|g' "$file"
+		sed -i 's|Grafana.com dashboard |app.enerzyz.com dashboard|g' "$file"
+		sed -i 's|https://grafana.com/docs/grafana/latest/panels/transformations|#|g' "$file"
         echo "Replaced in $file"
     fi
 done
