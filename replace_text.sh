@@ -41,7 +41,7 @@ do
 		sed -i 's|need to restart Grafana.|need to restart Enerzyz.|g' "$file"
 		sed -i 's|Isolated instances of Grafana|Isolated instances of Enerzyz|g' "$file"
 		sed -i 's|Stats and license| |g' "$file"
-		# sed -i 's|.id==="cloud"|.id==="notacloud"|g' "$file"
+		sed -i 's|/admin/upgrading| |g' "$file"
         echo "Replaced in $file"
     fi
 done
