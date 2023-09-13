@@ -42,6 +42,7 @@ do
 		sed -i 's|Isolated instances of Grafana|Isolated instances of Enerzyz|g' "$file"
 		sed -i 's|Stats and license| |g' "$file"
 		sed -i 's|/admin/upgrading| |g' "$file"
+		sed -i 's|http://docs.grafana.org/reference/playlist/| |g' "$file"
         echo "Replaced in $file"
     fi
 done
