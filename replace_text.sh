@@ -46,7 +46,8 @@ do
     fi
 done
 echo "Text replacement completed. for - Welcome"
-directory="/usr/share/grafana/public/app/"
+directory="/usr/share/grafana/bin/"
+# directory="/usr/share/grafana/public/app/"
 for file in "$directory"*
 do
     if [ -f "$file" ]; then
