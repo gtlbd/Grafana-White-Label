@@ -40,8 +40,8 @@ do
 		sed -i 's|These system settings are defined in grafana.ini|These system settings are defined in enerzyz.ini|g' "$file"
 		sed -i 's|need to restart Grafana.|need to restart Enerzyz.|g' "$file"
 		sed -i 's|Isolated instances of Grafana|Isolated instances of Enerzyz|g' "$file"
-		sed -i 's|.id==="enterprise"|.id==="notanenterprise"|g' "$file"
-		sed -i 's|.id==="cloud"|.id==="notacloud"|g' "$file"
+		sed -i 's|Stats and license| |g' "$file"
+		# sed -i 's|.id==="cloud"|.id==="notacloud"|g' "$file"
         echo "Replaced in $file"
     fi
 done
