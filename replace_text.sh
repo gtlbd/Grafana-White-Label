@@ -46,17 +46,17 @@ do
     fi
 done
 echo "Text replacement completed. for - Welcome"
-directory="/usr/share/grafana/bin/"
+# directory="/usr/share/grafana/bin/"
 # directory="/usr/share/grafana/public/app/"
-for file in "$directory"*
-do
-    if [ -f "$file" ]; then
+# for file in "$directory"*
+# do
+    # if [ -f "$file" ]; then
         # Use sed to replace the text and save it back to the file
-		sed -i 's|/admin/upgrading| |g' "$file"
-        echo "Replaced in $file"
-    fi
-done
-echo "Text replacement completed. for - Loading"
+		# sed -i 's|/admin/upgrading| |g' "$file"
+        # echo "Replaced in $file"
+    # fi
+# done
+# echo "Text replacement completed. for - Loading"
 directory="/usr/share/grafana/public/views/"
 for file in "$directory"*
 do
