@@ -46,6 +46,8 @@ do
 		sed -i 's|Import via grafana.com|Import via app.enerzyz.com|g' "$file"
 		sed -i 's|Grafana.com dashboard |app.enerzyz.com dashboard|g' "$file"
 		sed -i 's|https://grafana.com/docs/grafana/latest/panels/transformations|#|g' "$file"
+		
+		
         echo "Replaced in $file"
     fi
 done
