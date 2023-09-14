@@ -44,9 +44,29 @@ do
 		sed -i 's|/admin/upgrading| |g' "$file"
 		sed -i 's|Import dashboard from file or Grafana.com|Import dashboard from file or app.enerzyz.com|g' "$file"
 		sed -i 's|Import via grafana.com|Import via app.enerzyz.com|g' "$file"
-		sed -i 's|Grafana.com dashboard |app.enerzyz.com dashboard|g' "$file"
+		sed -i 's|Grafana.com dashboard |app.enerzyz.com dashboard |g' "$file"
 		sed -i 's|https://grafana.com/docs/grafana/latest/panels/transformations|#|g' "$file"
+		sed -i 's|http://docs.grafana.org/reference/playlist/|#|g' "$file"
+		sed -i 's|https://grafana.com/docs/grafana/latest/dashboards/time-range-controls|#|g' "$file"
+		sed -i 's|https://grafana.com/docs/grafana/latest/alerting/|#|g' "$file"
+		sed -i 's|Grafana managed alert|Enerzyz managed alert|g' "$file"
+		sed -i 's|https://grafana.com/docs/grafana/latest/alerting/fundamentals/annotation-label/variables-label-annotation|#|g' "$file"
+		sed -i 's|Grafana handles the notifications|Enerzyz handles the notifications|g' "$file"
+		sed -i 's|using non-Grafana alert management.|using non-Enerzyz alert management.|g' "$file"
 		
+		sed -i 's|your Grafana-managed alerts.|your Enerzyz-managed alerts.|g' "$file"
+		
+		sed -i 's|the Grafana alert rule|the Enerzyz alert rule|g' "$file"
+		
+		sed -i 's|(Grafana built-in Alertmanager)|(Enerzyz built-in Alertmanager)|g' "$file"
+		
+		sed -i 's|Receiving Grafana-managed alerts|Receiving Enerzyz-managed alerts|g' "$file"
+		
+		sed -i 's|send Grafana-managed alerts|send Enerzyz-managed alerts|g' "$file"
+		
+		sed -i 's|receive Grafana-managed alerts.|receive Enerzyz-managed alerts.|g' "$file"
+		
+		sed -i 's|Receive Grafana Alerts in a data source configuration.|Receive Enerzyz Alerts in a data source configuration.|g' "$file"
 		
         echo "Replaced in $file"
     fi
