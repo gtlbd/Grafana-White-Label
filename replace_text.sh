@@ -54,6 +54,7 @@ do
 		sed -i 's|Grafana handles the notifications|Enerzyz handles the notifications|g' "$file"
 		sed -i 's|using non-Grafana alert management.|using non-Enerzyz alert management.|g' "$file"
 		
+		
 		sed -i 's|your Grafana-managed alerts.|your Enerzyz-managed alerts.|g' "$file"
 		
 		sed -i 's|the Grafana alert rule|the Enerzyz alert rule|g' "$file"
@@ -67,7 +68,10 @@ do
 		sed -i 's|receive Grafana-managed alerts.|receive Enerzyz-managed alerts.|g' "$file"
 		
 		sed -i 's|Receive Grafana Alerts in a data source configuration.|Receive Enerzyz Alerts in a data source configuration.|g' "$file"
+		sed -i 's|https://grafana.com/docs/grafana/latest/administration/service-accounts/|#|g' "$file"
 		
+		
+		sed -i 's|https://grafana.com/docs/|#|g' "$file"
         echo "Replaced in $file"
     fi
 done
