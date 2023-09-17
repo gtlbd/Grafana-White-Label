@@ -69,7 +69,7 @@ do
 		
 		sed -i 's|Receive Grafana Alerts in a data source configuration.|Receive Enerzyz Alerts in a data source configuration.|g' "$file"
 		sed -i 's|https://grafana.com/docs/grafana/latest/administration/service-accounts/|#|g' "$file"
-		
+		sed -i 's|https://player.vimeo.com/video/720001629?h=c6c1732f92|#|g' "$file"		
 		
 		sed -i 's|https://grafana.com/docs/|#|g' "$file"
         echo "Replaced in $file"
