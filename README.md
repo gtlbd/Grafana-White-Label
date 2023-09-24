@@ -29,6 +29,50 @@ This script is responsible for creating a backup of files and directories from t
 #### `replace_text.sh`
 
 The `replace_text.sh` script performs text replacement in Grafana files. It replaces predefined text strings with customized text, allowing you to tailor the text in Grafana to your specific needs.
+Certainly! The `replace_text.sh` script in the Grafana White Label Customization repository is responsible for replacing specific text strings within Grafana files. This script allows you to customize the textual content in Grafana to match your organization's branding or requirements. Let's break down how this script works in more detail:
+
+### Purpose
+
+The main purpose of `replace_text.sh` is to search for predefined text strings within Grafana files and replace them with custom text strings. This can include changing default branding, labels, or any other text-based content within Grafana.
+
+### How the Script Works
+
+1. **Defining Source and Replacement Text**:
+   - In the script, there are variables that define the source text (`source_*`) and the replacement text (`replacement_*`). These variables specify which text strings should be replaced and what they should be replaced with.
+
+2. **Iterating Through Files**:
+   - The script then goes through a set of Grafana files to perform the replacement. Specifically, it operates on files located in the `/usr/share/grafana/public/build/` directory. These files typically contain the frontend code and text content that is visible in the Grafana user interface.
+
+3. **Using `sed` for Replacement**:
+   - The script utilizes the `sed` command, which is a stream editor for text manipulation. It searches for occurrences of the source text in each file and replaces them with the corresponding replacement text.
+
+4. **Customizable Replacements**:
+   - You can customize the `source_*` and `replacement_*` variables to define your own replacement rules. For example, if you want to replace all occurrences of "Grafana" with "Enerzyz," you would set `source_Welcome_text="Grafana"` and `replacement_Welcome_text="Enerzyz"`.
+
+5. **Multiple Replacements**:
+   - The script can perform multiple replacements in each file. It iterates through the specified files and replaces all occurrences of the defined source text with the replacement text.
+
+### Example Customizations
+
+Here are some examples of what you can achieve with `replace_text.sh`:
+
+- Change the welcome message from "Welcome to Grafana" to "Welcome to My Dashboard."
+- Replace "Grafana" with your organization's name throughout the Grafana interface.
+- Customize help text, labels, or any other text-based content in Grafana.
+
+### Use Cases
+
+The `replace_text.sh` script is particularly useful when you want to make global text changes to Grafana without manually editing each file. It simplifies the process of branding Grafana to match your organization's identity.
+
+### Important Considerations
+
+When using `replace_text.sh`, keep the following considerations in mind:
+
+- Make sure to back up your original Grafana files before running this script to ensure you can revert to the default state if needed.
+- Test the script in a non-production environment to verify that the replacements work as expected.
+- Be cautious when making extensive changes, as they may affect Grafana's functionality or user experience.
+
+Overall, `replace_text.sh` is a powerful tool for customizing Grafana's textual content and branding to align with your organization's needs.
 
 #### `restore_default.sh`
 
