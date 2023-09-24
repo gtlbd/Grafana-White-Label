@@ -69,25 +69,14 @@ do
 		
 		sed -i 's|Receive Grafana Alerts in a data source configuration.|Receive Enerzyz Alerts in a data source configuration.|g' "$file"
 		sed -i 's|https://grafana.com/docs/grafana/latest/administration/service-accounts/|#|g' "$file"
-		#sed -i 's|e.createElement(s, { className: a.videoBlock }, e.createElement("iframe", { title: "Alerting - Introductory video", src: "https://player.vimeo.com/video/720001629?h=c6c1732f92", width: "960", height: "540", allow: "autoplay; fullscreen", allowFullScreen: !0, frameBorder: "0", style: { colorScheme: "light dark" } }))| |g' "$file"		
-		sed -i 's|e\.createElement(s, { className: a\.videoBlock }, e\.createElement("iframe", { title: "Alerting - Introductory video", src: "https://player.vimeo.com/video/720001629?h=c6c1732f92", width: "960", height: "540", allow: "autoplay; fullscreen", allowFullScreen: !0, frameBorder: "0", style: { colorScheme: "light dark" } }))||g' "$file"
+		sed -i 's|https://player.vimeo.com/video/720001629?h=c6c1732f92| |g' "$file"		
+		#sed -i 's|e\.createElement(s, { className: a\.videoBlock }, e\.createElement("iframe", { title: "Alerting - Introductory video", src: "https://player.vimeo.com/video/720001629?h=c6c1732f92", width: "960", height: "540", allow: "autoplay; fullscreen", allowFullScreen: !0, frameBorder: "0", style: { colorScheme: "light dark" } }))||g' "$file"
 
 		sed -i 's|https://grafana.com/docs/|#|g' "$file"
         echo "Replaced in $file"
     fi
 done
 echo "Text replacement completed. for - Welcome"
-# directory="/usr/share/grafana/bin/"
-# directory="/usr/share/grafana/public/app/"
-# for file in "$directory"*
-# do
-    # if [ -f "$file" ]; then
-        # Use sed to replace the text and save it back to the file
-		# sed -i 's|/admin/upgrading| |g' "$file"
-        # echo "Replaced in $file"
-    # fi
-# done
-# echo "Text replacement completed. for - Loading"
 directory="/usr/share/grafana/public/views/"
 for file in "$directory"*
 do

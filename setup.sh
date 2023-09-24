@@ -1,8 +1,8 @@
 #!/bin/bash
-# sudo mkdir -p /home/$USER/Grafana-White-Label/Original_Files/public
-# echo -e "Starting Backup - from: '/usr/share/grafana/public/', to: '/home/$USER/Grafana-White-Label/Original_Files/public/'"
-# sudo cp -ru /usr/share/grafana/public/* /home/$USER/Grafana-White-Label/Original_Files/public/
-# echo -e "Done - Backup"
+sudo mkdir -p /home/$USER/Grafana-White-Label/Original_Files/public
+echo -e "Starting Backup - from: '/usr/share/grafana/public/', to: '/home/$USER/Grafana-White-Label/Original_Files/public/'"
+sudo cp -ru /usr/share/grafana/public/* /home/$USER/Grafana-White-Label/Original_Files/public/
+echo -e "Done - Backup"
 echo -e "service grafana-server stop"
 sudo service grafana-server stop
 chmod +x create_and_backup.sh
