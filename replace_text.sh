@@ -97,8 +97,8 @@ do
     if [ -f "$file" ]; then
         # Use sed to replace the text and save it back to the file
 		
-		sed -i 's|https://grafana.com/static/assets/img/logo_new_transparent_400x100.png|public/img/logo_new_transparent_400x100.png|g' "$file"
-		sed -i 's|Grafana v{{.BuildVersion}}|Enerzyz.com|g' "$file"
+		sed -i 's|https://grafana.com/static/assets/img/logo_new_transparent_400x100.png|https://app.enerzyz.com/public/img/logo_new_transparent_400x100.png|g' "$file"
+		sed -i 's|Grafana v{{.BuildVersion}}|Enerzyz.com v|g' "$file"
 		sed -i 's|Grafana Labs| |g' "$file"
 	
         echo "Replaced in $file"
