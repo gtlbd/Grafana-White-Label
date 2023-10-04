@@ -45,11 +45,7 @@ do
 		sed -i 's|Import dashboard from file or Grafana.com|Import dashboard from file or app.enerzyz.com|g' "$file"
 		sed -i 's|Import via grafana.com|Import via app.enerzyz.com|g' "$file"
 		sed -i 's|Grafana.com dashboard |app.enerzyz.com dashboard |g' "$file"
-		
-		sed -i 's|https://grafana.com/static/assets/img/logo_new_transparent_200x48.png|public/img/logo_new_transparent_200x48.png|g' "$file"
-		sed -i 's|Grafana v{{.BuildVersion}}|Enerzyz.com|g' "$file"
-		sed -i 's|© 2023 Grafana Labs|© 2023|g' "$file"
-		
+	
 		sed -i 's|https://grafana.com/docs/grafana/latest/panels/transformations|#|g' "$file"
 		sed -i 's|http://docs.grafana.org/reference/playlist/|#|g' "$file"
 		sed -i 's|https://grafana.com/docs/grafana/latest/dashboards/time-range-controls|#|g' "$file"
@@ -94,3 +90,18 @@ do
     fi
 done
 echo "Text replacement completed. for - Loading"
+
+directory="/usr/share/grafana/public/emails/"
+for file in "$directory"*
+do
+    if [ -f "$file" ]; then
+        # Use sed to replace the text and save it back to the file
+		
+		sed -i 's|https://grafana.com/static/assets/img/logo_new_transparent_200x48.png|public/img/logo_new_transparent_200x48.png|g' "$file"
+		sed -i 's|Grafana v{{.BuildVersion}}|Enerzyz.com|g' "$file"
+		sed -i 's|© 2023 Grafana Labs|© 2023|g' "$file"
+	
+        echo "Replaced in $file"
+    fi
+done
+echo "Text replacement completed. for - Email template"
