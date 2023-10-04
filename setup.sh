@@ -24,8 +24,8 @@ sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/grafana_mask_icon.sv
 echo -e "Done - grafana_mask_icon.svg"
 
 
-sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/logo_new_transparent_200x48.png /usr/share/grafana/public/img/
-echo -e "Done - logo_new_transparent_200x48.png"
+sudo scp /home/$USER/Grafana-White-Label/grafana/public/img/logo_new_transparent_400x100.png /usr/share/grafana/public/img/
+echo -e "Done - logo_new_transparent_400x100.png"
 cd /home/$USER/Grafana-White-Label/
 ls
 chmod +x replace_text.sh
